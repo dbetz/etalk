@@ -23,12 +23,12 @@ class-statement:
 |   <cmethod-definition>
 
 method-definition:
-    METHOD <name> ( [ <arg> [ , <arg> ]* ] )
+    METHOD '[' THIS <selector> [ <arg> [ <selector> <arg> ]* ] ']'
       <statement>*
     END METHOD
 
 cmethod-definition:
-    CMETHOD <name> ( [ <arg> [ , <arg> ]* ] )
+    CMETHOD '[' THIS <selector> [ <arg> [ <selector> <arg> ]* ] ']'
       <statement>*
     END CMETHOD
 
@@ -68,12 +68,9 @@ expression:
 |   <expression> > <expression>
 |   <variable> := <expression>
 |   <expression> ( [ <expression> [ , <expression> ]* ] )
-|   [ <selector-and-arguments> ]
+|   '[' <expression> <selector> [ <arg> [ <selector> <arg> ]* ] ']'
 |   ( <expression> )
 |   <variable>
 |   <integer-constant>
 |   <string-constant>
-
-selector-and-arguments:
-    (how to describe this?)
 ```
