@@ -3,6 +3,7 @@ A Simple Object-Oriented Language
 
 The program starts in a function named "MAIN".
 
+```
 program:
     <definition>*
 
@@ -75,3 +76,4 @@ expression:
 
 selector-and-arguments:
     (how to describe this?)
+```
